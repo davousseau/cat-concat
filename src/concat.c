@@ -55,7 +55,7 @@ int main(int argc, const char *argv[])
 {
     if (argc != 4)
     {
-        fprintf(stderr, "Usage: ./concat [<input-filename-1>] [<input-filename-2>] [<output-filename>]\n");
+        fprintf(stderr, "Usage: bin/concat [<input-file-1>] [<input-file-2>] [<output-file>]\n");
         exit(EXIT_FAILURE);
     }
     FILE *file = fopen(argv[3], "w");
