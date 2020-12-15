@@ -15,7 +15,7 @@
  * Get the file size.
  * @param file File to seek
  */
-long getFileSize(FILE *file)
+long getSize(FILE *file)
 {
     fseek(file, 0L, SEEK_END);
     long int size = ftell(file) + 1;
@@ -29,7 +29,7 @@ long getFileSize(FILE *file)
  */
 void printFile(FILE *file)
 {
-    long size = getFileSize(file);
+    long size = getSize(file);
     char buffer[size];
     while (fgets(buffer, size, (FILE *)file))
     {
