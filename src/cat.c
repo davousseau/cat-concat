@@ -12,11 +12,54 @@
 #include <string.h>
 
 /**
+ * Get the file size.
+ * @param file File to seek
+ */
+long getFileSize(FILE *file)
+{
+    fseek(file, 0L, SEEK_END);
+    long int size = ftell(file) + 1;
+    rewind(file);
+    return size;
+}
+
+/**
+ * Print the file in the terminal.
+ * @param file File to print
+ */
+void printFile(FILE *file)
+{
+    long size = getFileSize(file);
+    char buffer[size];
+    while (fgets(buffer, size, (FILE *)file))
+    {
+        fprintf(stdout, "%s", buffer);
+    }
+    printf("\n");
+}
+
+/**
  * Launch the cat command.
  * @param argc Number of parameter
  * @param argv File to display
  * @return Exit status
  */
-int main(int argc, const char *argv[]) {
-    // TODO:
+int main(int argc, const char *argv[])
+{
+    if (argc < 2)
+    {
+        fprintf(stderr, "Usage: ./cat [<input-filename>]\n");
+        exit(EXIT_FAILURE);
+    }
+    for (int i = 1; i < argc; i++)
+    {
+        FILE *file = fopen(argv[i], "r");
+        if (file == NULL)
+        {
+            fprintf(stderr, "cat: %s: %s\n", argv[i], strerror(errno));
+            exit(EXIT_FAILURE);
+        }
+        printFile(file);
+        fclose(file);
+    }
 }
