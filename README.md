@@ -19,10 +19,22 @@ Reproduire le fonctionnement des commandes Cat et Concat dans le language C à l
 Testé sous un environnement **linux seulement**.
 
 ## Installation
-TODO:
+`make`, compile les deux commandes.<br>
+`make cat`, compile la commande cat uniquement.<br>
+`make concat`, compile la commande concat uniquement.<br>
+`make doc`, génère la documentation du projet.<br>
+`make clean`, supprime les fichiers compilés.
 
 ## Fonctionnement
-TODO:
+### Cat
+```
+bin/cat [<input-file>]
+```
+
+### Concat
+```
+bin/concat [<input-file-1>] [<input-file-2>] [<output-file>]
+```
 
 ## Références
 - [cat(1) — Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
