@@ -18,6 +18,7 @@ concat: bin
 doc:
 	mkdir -p $@
 	(cat Doxyfile ; echo "GENERATE_LATEX=NO";\
+	echo "HAVE_DOT=NO";\
 	echo "OPTIMIZE_OUTPUT_FOR_C=YES";\
 	echo "OUTPUT_DIRECTORY="$@;\
 	echo "OUTPUT_LANGUAGE=French";\
