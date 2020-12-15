@@ -1,5 +1,7 @@
 # @author: David Brousseau
 
+CFLAGS = -std=c99 -pedantic -W -Wall
+
 .PHONY: all clean
 
 default: cat concat
@@ -8,10 +10,10 @@ bin:
 	mkdir -p $@
 
 cat: bin
-	gcc src/cat.c -g -o bin/cat
+	gcc src/cat.c -g $(CFLAGS) -o bin/cat
 
 concat: bin
-	gcc src/concat.c -g -o bin/concat
+	gcc src/concat.c -g $(CFLAGS) -o bin/concat
 
 doc:
 	mkdir -p $@
