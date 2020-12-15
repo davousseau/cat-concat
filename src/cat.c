@@ -62,4 +62,5 @@ int main(int argc, const char *argv[])
         printFile(file);
         fclose(file);
     }
+    return EXIT_SUCCESS;
 }
