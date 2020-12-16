@@ -40,7 +40,7 @@ void printFile(FILE *file)
 
 /**
  * Launch the cat command.
- * @param argc Number of parameter
+ * @param argc Number of parameters
  * @param argv File to display
  * @return Exit status
  */

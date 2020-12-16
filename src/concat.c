@@ -47,7 +47,7 @@ void writeFile(const char *inputFilename, FILE *outputFile)
 
 /**
  * Launch the concat command.
- * @param argc Number of parameter
+ * @param argc Number of parameters
  * @param argv Files to merge
  * @return Exit status
  */
