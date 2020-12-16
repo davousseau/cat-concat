@@ -48,7 +48,7 @@ int main(int argc, const char *argv[])
 {
     if (argc < 2)
     {
-        fprintf(stderr, "Usage: bin/cat [<input-file>]\n");
+        fprintf(stderr, "Use: bin/cat <filename>\n");
         exit(EXIT_FAILURE);
     }
     for (int i = 1; i < argc; i++)
