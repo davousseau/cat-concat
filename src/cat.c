@@ -12,7 +12,7 @@
 #include <string.h>
 
 /**
- * Get the file size.
+ * @brief Get the file size.
  * @param file File to seek
  */
 long getSize(FILE *file)
@@ -24,7 +24,7 @@ long getSize(FILE *file)
 }
 
 /**
- * Print the file in the terminal.
+ * @brief Print the file in the terminal.
  * @param file File to print
  */
 void printFile(FILE *file)
@@ -39,7 +39,7 @@ void printFile(FILE *file)
 }
 
 /**
- * Launch the cat command.
+ * @brief Launch the cat command.
  * @param argc Number of parameters
  * @param argv File to display
  * @return Exit status

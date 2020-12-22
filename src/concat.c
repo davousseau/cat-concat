@@ -12,7 +12,7 @@
 #include <string.h>
 
 /**
- * Get the file size.
+ * @brief Get the file size.
  * @param file File to seek
  */
 long getSize(FILE *file)
@@ -24,7 +24,7 @@ long getSize(FILE *file)
 }
 
 /**
- * Write the contents of a file to an output file.
+ * @brief Write the contents of a file to an output file.
  * @param inputFilename Input filename
  * @param outputFile Output file
  */
@@ -46,7 +46,7 @@ void writeFile(const char *inputFilename, FILE *outputFile)
 }
 
 /**
- * Launch the concat command.
+ * @brief Launch the concat command.
  * @param argc Number of parameters
  * @param argv Files to merge
  * @return Exit status
