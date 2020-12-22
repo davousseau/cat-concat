@@ -13,6 +13,7 @@ Simuler le fonctionnement des commandes Cat et Concat dans le langage C à l'aid
 - [VS Code](https://code.visualstudio.com/), éditeur de texte pour modifier le code.
 - [C/C++ Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools), extension du language C réservé à l'utilisation de VS Code.
 - [Doxygen](https://www.doxygen.nl/index.html), outil pour générer la documentation automatique.
+- [Valgrind](https://www.valgrind.org/), outil pour vérifier qu'il n'y a pas de fuites de mémoire.
 
 ## Compatibilité
 Testé sous un environnement **linux seulement**.
@@ -21,7 +22,8 @@ Testé sous un environnement **linux seulement**.
 `make`, compile les deux commandes.<br>
 `make cat`, compile la commande cat uniquement.<br>
 `make concat`, compile la commande concat uniquement.<br>
-`make doc`, génère la documentation du projet.<br>
+`make doc`, génère la documentation du projet. **(requiert Doxygen)**<br>
+`make memcheck`, vérifie qu'il n'y a pas de fuites de mémoire. **(requiert Valgrind)**<br>
 `make clean`, supprime les fichiers compilés.
 
 ## Fonctionnement
@@ -39,3 +41,4 @@ bin/concat <input-filename> <input-filename> <output-filename>
 - [cat(1) — Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
 - [C Program to merge contents of two files into a third file](https://www.geeksforgeeks.org/c-program-merge-contents-two-files-third-file/)
 - [Doxygen manual](http://cs.swan.ac.uk/~csoliver/ok-sat-library/internet_html/doc/doc/Doxygen/1.7.6.1/html/config.html)
+- [Valgrind User Manual](https://www.valgrind.org/docs/manual/manual.html)

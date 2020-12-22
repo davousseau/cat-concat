@@ -2,7 +2,7 @@
 
 CFLAGS = -std=c99 -pedantic -W -Wall
 
-.PHONY: all clean
+.PHONY: all memcheck clean
 
 default: cat concat
 
@@ -26,5 +26,24 @@ doc:
 	echo "RECURSIVE=YES") | doxygen -
 	ln -rsf $@/html/index.html $@/index.html
 
+memcheck: default
+	# Concat exercise
+	echo "abc" >> tmp1
+	echo "123" >> tmp2
+	valgrind --leak-check=full \
+	--show-leak-kinds=all \
+	--track-origins=yes \
+	--verbose \
+	--log-fd=9 9>>valgrind.log \
+	bin/concat tmp1 tmp2 tmp
+	# Cat exercise
+	valgrind --leak-check=full \
+	--show-leak-kinds=all \
+	--track-origins=yes \
+	--verbose \
+	--log-fd=9 9>>valgrind.log \
+	bin/cat tmp
+	rm tmp*
+
 clean:
-	rm -rf bin doc
+	rm -rf bin doc valgrind.log
