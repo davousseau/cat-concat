@@ -6,7 +6,7 @@
 Projet effectué dans le cadre du cours **INF3172 Principes des systèmes d'exploitation**, remis à l'enseignante **Sonia Dimassi** à l'[Université du Québec à Montréal](https://etudier.uqam.ca/) le 4 mars 2019. Ce projet a été retranscris en décembre 2020 pour le rendre public et l'insérer dans mon porte-folio.
 
 ## Description
-Simuler le fonctionnement des commandes Cat et Concat dans le langage C à l'aide d'un [descripteur de fichier](https://en.wikipedia.org/wiki/File_descriptor). À noter que ce projet est séparé en deux exercices distincts.
+Simulation du fonctionnement des commandes Cat et Concat à l'aide d'un [descripteur de fichier](https://en.wikipedia.org/wiki/File_descriptor). À noter que ce projet est séparé en deux exercices distincts.
 
 ## Environnement suggéré
 - [Terminal Linux](https://doc.ubuntu-fr.org/terminal), terminal pour lancer des commandes.
