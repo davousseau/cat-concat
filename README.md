@@ -17,7 +17,7 @@ Simulation du fonctionnement des commandes Cat et Concat à l'aide d'un [descrip
 - [Valgrind](https://www.valgrind.org/), outil pour vérifier qu'il n'y a pas de fuites de mémoire.
 
 ## Compatibilité
-Testé sous un environnement **linux seulement**.
+Testé sous un environnement **Linux seulement**.
 
 ## Installation
 `make`, compile les deux commandes.<br>
