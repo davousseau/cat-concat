@@ -2,7 +2,7 @@
 
 CFLAGS = -std=c99 -pedantic -W -Wall
 
-.PHONY: all memcheck clean
+.PHONY: default memcheck clean
 
 default: cat concat
 
