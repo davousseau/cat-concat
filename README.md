@@ -9,7 +9,6 @@ Projet effectué dans le cadre du cours **INF3172 Principes des systèmes d'expl
 Simulation du fonctionnement des commandes Cat et Concat à l'aide d'un [descripteur de fichier](https://en.wikipedia.org/wiki/File_descriptor). À noter que ce projet est séparé en deux exercices distincts.
 
 ## Environnement suggéré
-- [Terminal Linux](https://doc.ubuntu-fr.org/terminal), terminal pour lancer des commandes.
 - [VS Code](https://code.visualstudio.com/), éditeur de texte pour modifier le code.
 - [C/C++ Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools), extension du language C réservé à l'usage de VS Code.
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight), extension d'affichage des TODOs réservé à l'usage de VS Code.
