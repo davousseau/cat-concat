@@ -35,7 +35,7 @@ memcheck: default
 	--show-leak-kinds=all \
 	--track-origins=yes \
 	--verbose \
-	--log-fd=9 9>>valgrind.log \
+	--log-fd=9 9>valgrind.log \
 	bin/concat tmp1 tmp2 tmp > /dev/null
 	# Cat exercise
 	valgrind --leak-check=full \
