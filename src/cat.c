@@ -5,7 +5,6 @@
  * @version 0.1
  * @date December 2020
  */
-
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,8 +14,7 @@
  * @brief Get the file size.
  * @param file File to seek
  */
-long getSize(FILE *file)
-{
+long getSize(FILE * file) {
     fseek(file, 0L, SEEK_END);
     long int size = ftell(file) + 1;
     rewind(file);
@@ -27,14 +25,10 @@ long getSize(FILE *file)
  * @brief Print the file in the terminal.
  * @param file File to print
  */
-void printFile(FILE *file)
-{
+void printFile(FILE * file) {
     long size = getSize(file);
     char buffer[size];
-    while (fgets(buffer, size, (FILE *)file))
-    {
-        fprintf(stdout, "%s", buffer);
-    }
+    while (fgets(buffer, size, (FILE *) file)) { fprintf(stdout, "%s", buffer); }
     printf("\n");
 }
 
@@ -44,18 +38,14 @@ void printFile(FILE *file)
  * @param argv File to display
  * @return Exit status
  */
-int main(int argc, const char *argv[])
-{
-    if (argc < 2)
-    {
+int main(int argc, const char * argv[]) {
+    if (argc < 2) {
         fprintf(stderr, "Usage: bin/cat <filename>\n");
         exit(EXIT_FAILURE);
     }
-    for (int i = 1; i < argc; i++)
-    {
-        FILE *file = fopen(argv[i], "r");
-        if (file == NULL)
-        {
+    for (int i = 1; i < argc; i++) {
+        FILE * file = fopen(argv[i], "r");
+        if (file == NULL) {
             fprintf(stderr, "cat: %s: %s\n", argv[i], strerror(errno));
             exit(EXIT_FAILURE);
         }
