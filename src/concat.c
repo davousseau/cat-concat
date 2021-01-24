@@ -14,7 +14,7 @@
  * @brief Get the file size.
  * @param file File to seek
  */
-long getSize(FILE * file) {
+long getSize(FILE *file) {
     fseek(file, 0L, SEEK_END);
     long int size = ftell(file) + 1;
     rewind(file);
@@ -26,8 +26,8 @@ long getSize(FILE * file) {
  * @param inputFilename Input filename
  * @param outputFile Output file
  */
-void writeFile(const char * inputFilename, FILE * outputFile) {
-    FILE * file = fopen(inputFilename, "r");
+void writeFile(const char *inputFilename, FILE *outputFile) {
+    FILE *file = fopen(inputFilename, "r");
     if (file == NULL) {
         fprintf(stderr, "concat: %s: %s\n", inputFilename, strerror(errno));
         exit(EXIT_FAILURE);
@@ -44,12 +44,12 @@ void writeFile(const char * inputFilename, FILE * outputFile) {
  * @param argv Files to merge
  * @return Exit status
  */
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[]) {
     if (argc != 4) {
         fprintf(stderr, "Usage: bin/concat <input-filename> <input-filename> <output-filename>\n");
         exit(EXIT_FAILURE);
     }
-    FILE * file = fopen(argv[3], "w");
+    FILE *file = fopen(argv[3], "w");
     if (file == NULL) {
         fprintf(stderr, "concat: %s: %s\n", argv[3], strerror(errno));
         exit(EXIT_FAILURE);
